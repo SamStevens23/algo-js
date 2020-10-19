@@ -1,32 +1,32 @@
 const readlineSync = require("readline-sync");
 // EXERCISE 1
-// function askTvSerie() {
+function askTvSerie() {
 
-// let nameShow = readlineSync.question ("What is the name of your favorite show? ");
-// let produce  = readlineSync.question ("When was it produced? ");
-// let n = readlineSync.question ("How many cast members will you choose? ");
+let nameShow = readlineSync.question ("What is the name of your favorite show? ");
+let produce  = readlineSync.question ("When was it produced? ");
+let n = readlineSync.question ("How many cast members will you choose? ");
 
-// let arr = [];
+let arr = [];
 
-// for (let i = 0; i < n; i ++) { 
+for (let i = 0; i < n; i ++) { 
 
-//     let members = readlineSync.question ("Name a member ");
-//     arr.push(members);
+    let members = readlineSync.question ("Name a member ");
+    arr.push(members);
 
-// }
-// let myObject = {
+}
+let myObject = {
 
-//     "name": nameShow,
-//     "production_year": produce,
-//     "cast_members": arr
-// };
+    "name": nameShow,
+    "production_year": produce,
+    "cast_members": arr
+};
 
 
-// return myObject;
+return myObject;
 
-// }
+}
 
-// console.log(JSON.stringify(askTvSerie()));
+console.log(JSON.stringify(askTvSerie()));
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
