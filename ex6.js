@@ -31,10 +31,36 @@ class Rectangle {
         this.topLeftYPos = topLeftYPos;
         this.width = width;
         this.lenght = lenght;
+
+    let 
     }
-
-    collides(otherRectangle) {
-
-    }
-
 }
+
+class Rectangle {
+    constructor(topLeftXPos, topLeftYPos, width, length) {
+        this.topLeftXPos = topLeftXPos;
+        this.topLeftYPos = topLeftYPos;
+        this.width = width;
+        this.length = length;
+    }
+    get topRightXPos(){
+        return (this.topLeftXPos + this.width);
+    }
+    get bottomLeftYPos(){
+        return (this.topLeftYPos - this.length);
+    }
+    collides(otherRectangle){
+        if (
+            ((otherRectangle.topLeftXPos>=this.topLeftXPos && otherRectangle.topLeftXPos<=this.topRightXPos)
+            ||(otherRectangle.topRightXPos>=this.topLeftXPos && otherRectangle.topRightXPos<=this.topRightXPos)) 
+            && 
+            ((otherRectangle.topLeftYPos<=this.topLeftYPos && otherRectangle.topLeftYPos>=this.bottomLeftYPos)
+            ||(otherRectangle.bottomLeftYPos<=this.topLeftYPos && otherRectangle.bottomLeftYPos>=this.bottomLeftYPos))            )
+            { return true;
+        } else {
+            return false;
+        }
+    }
+}
+
+
